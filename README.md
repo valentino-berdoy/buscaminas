@@ -1,7 +1,7 @@
 # TP - Buscaminas
 
 ## Introducción
-En este trabajo estaremos programando un juego similar al clásico Buscaminas (si no lo conocés podés probarlo [acá http://buscaminas.eu/](http://buscaminas.eu/). 
+En este trabajo estaremos programando un juego similar al clásico Buscaminas (si no lo conocés podés probarlo [acá http://buscaminas.eu/](http://buscaminas.eu/) ). 
 
 <center>
 	<img src="img/buscaminas1.png" height="250"/>
@@ -22,7 +22,7 @@ Como el desarrollo de este juego involucra temas que aún no trabajamos, algunas
 
 **D. No te olvides de invitar a los compañeros de tu grupo**. Para hacer esto debés hacer click en share y buscar los usuarios de sus cuentas, o hacer click en `copy link` y compartírselos.
 
-**E. Compartile el proyecto a tu profesor así lo puede corregir**. Para hacer esto debés hacer click en share y buscar los 
+**E. Compartile el proyecto a tu profesor así lo puede corregir**. Para hacer esto debés hacer click en share y buscar la cuenta de tu profesor. Para **3º B** es **JoaquinBlanco**  y para **3º D** es **smschachtner**.
 
 **F.** Por último te pedimos que le **cambies el nombre al proyecto** así están todos ordenados y los podemos encontrar más fácil.
 
