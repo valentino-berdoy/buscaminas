@@ -110,16 +110,19 @@ function ponerMinaCasillero(columna, fila) {
 }
 
 function descubrirCasillero(columna, fila) {
-    tableroDeDescubiertos[columna][fila] = true;
-    casillerosSinDescubrir--;
-    pintarCasillero(columna, fila, COLOR_CASILLERO_SIN_MINA);
-    let minasAlrededor = contarMinasAlrededor(columna, fila);
-    if (minasAlrededor == 0)
-        floodFill(columna, fila);  //revela casilleros adyacentes (usa recursividad)
-    else {
-        mostrarNumeroCasillero(columna, fila, minasAlrededor);
-        console.log(minasAlrededor);
-    }
+	if( tableroDeDescubiertos[columna][fila] == false )
+    {
+	    tableroDeDescubiertos[columna][fila] = true;
+	    casillerosSinDescubrir--;
+	    pintarCasillero(columna, fila, COLOR_CASILLERO_SIN_MINA);
+	    let minasAlrededor = contarMinasAlrededor(columna, fila);
+	    if (minasAlrededor == 0)
+	        floodFill(columna, fila);  //revela casilleros adyacentes (usa recursividad)
+	    else {
+	        mostrarNumeroCasillero(columna, fila, minasAlrededor);
+	        console.log(minasAlrededor);
+	    }
+	}
 }
 
 function estaDescubierto(columna, fila) {
