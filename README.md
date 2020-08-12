@@ -234,11 +234,11 @@ Los siguientes procedimientos/funciones de P5 te serán útiles para la resoluci
     
     Tenga en cuenta que ya se declaró una constante llamada `CANTIDAD_MINAS` que guarda la cantidad de minas que se deben ubicar en el tablero.
 
-    ¿Cuánto debe valer la variable `casillerosSinDescubrir()` para darnos cuenta que el jugador ganó el juego? 
+    ¿Cuánto debe valer la variable `casillerosSinDescubrir` para darnos cuenta que el jugador ganó el juego? 
     <details>
       <summary>AYUDA</summary>
       
-      Cuando se gana el juego: ¿la variable `casillerosSinDescubrir()` debe ser **mayor, igual o menor** a la constante `CANTIDAD_MINAS`?
+      Cuando se gana el juego: ¿la variable `casillerosSinDescubrir` debe ser **mayor, igual o menor** a la constante `CANTIDAD_MINAS`?
     </details>
 
 
