@@ -10,7 +10,6 @@ En este trabajo estaremos programando un juego similar al clásico Buscaminas (s
 
 Como el desarrollo de este juego involucra temas que aún no trabajamos, algunas partes del juego ya te las daremos resueltas y sólo deberás hacer lo que iremos pidiendo más adelante.
 
-
 ## ¿Cómo copio el código para empezar a trabajar?
 **A.** Para copiar el código que te damos hecho tenés que ingresar acá https://repl.it/ e iniciar sesión con tu cuenta.
 
@@ -39,7 +38,7 @@ Por ejemplo, para el TP 3 del grupo 5 sería: 2020-AP3-G05-TP03
 
 - `main.js`: es el archivo de código principal, acá vas a tener que ir resolviendo el código que te pidamos.
 - `respuestas.md`: es un archivo de texto donde tenés que responder los puntos que sólo hacen preguntas y NO piden código.
-- `README.md`: es este archivo que estás viendo, donde está el enunciado. Te recomendamos que NO lo abras desde `repl.it`porque puede hacer que se vea mal, conviene accederlo directamente desde el link que te damos en la tarea de Teams.
+- `README.md`: es este archivo que estás viendo, donde está el enunciado. **Te recomendamos que NO lo abras desde `repl.it`porque puede hacer que se vea mal, conviene accederlo directamente desde el link que te damos en la tarea de Teams.**
 - Carpeta `img`: ahí pusimos las imágenes que usa el programa.
 - `utils.js`: en este archivo es donde los profes pusimos el código que ustedes no deben resolver, por lo tanto **NO tenés que modificarlo y recordá el consejo que le dió el abuelo a Homero el día de su casamiento.**
 
