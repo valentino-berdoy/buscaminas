@@ -60,7 +60,7 @@ Los siguientes procedimientos/funciones de P5 te serán útiles para la resoluci
     - ponerMinaCasillero(columna, fila)
     - tieneMinaCasillero(columna, fila)
     - pintarCasillero(columna, fila, color)
-    - descubrirCasillero()
+    - descubrirCasillero(columna, fila)
     - ganar()
     - perder()
 
