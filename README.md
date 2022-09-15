@@ -301,7 +301,7 @@ Los siguientes procedimientos/funciones de P5 te serán útiles para la resoluci
 
 
 
-11. Teniendo encuenta lo respondido en el punto anterior deberá utilizar/ejecutar la función donde corresponda, utilizando  una pregunta/`if` para que en caso de que la función retorne `true` (indicando que se ganó el juego), luego se ejecute el procedimiento `ganar()`. Ese procedimiento se encarga entre otras cosas de terminar el juego y mostrar una imagen al ganador, pero ya fue desarrollado/definido, por lo tnato solo tenés que ejecutarlo. 
+11. Teniendo encuenta lo respondido en el punto anterior deberá utilizar/ejecutar la función donde corresponda, utilizando  una pregunta/`if` para que en caso de que la función retorne `true` (indicando que se ganó el juego), luego se ejecute el procedimiento `ganar()`. Ese procedimiento se encarga entre otras cosas de terminar el juego y mostrar una imagen al ganador, pero ya fue desarrollado/definido, por lo tanto solo tenés que ejecutarlo. 
 
 
 
