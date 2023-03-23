@@ -26,7 +26,6 @@ function setup()
   COLOR_CASILLERO_CON_MINA = color("#FF0000");
   COLOR_CASILLERO_SIN_MINA = color("#1CC932");
   COLOR_CASILLERO_MARCADO = color("#278EF2");
-
   // Modificar/completar
 }
 
@@ -34,7 +33,18 @@ function setup()
 function draw() {
   if (hizoClick == true)
   {
-    pintarCasillero(columnaPresionada, filaPresionada, COLOR_CASILLERO_SIN_MINA); //pinta el casillero clickeado. Modificar/completar
+    if (mouseButton == LEFT){
+      if (tieneMinaCasillero(columnaPresionada,filaPresionada)== true){
+        perder();
+      }
+      else{
+        pintarCasillero(columnaPresionada, filaPresionada, COLOR_CASILLERO_SIN_MINA);
+        descubrirCasillero(columnaPresionada, filaPresionada); //pinta el casillero clickeado. Modificar/completar
+      }
+
+  
+    }
+   
 
 
     
@@ -50,7 +60,9 @@ function ganoElJuego()
 
 function ponerMinasTablero()
 {
-  // Modificar/completar
+  for (i in range (0,10)){
+
+  }
 }
 
 function mostrarMinas()
