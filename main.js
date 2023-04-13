@@ -1,7 +1,7 @@
 //Constantes del juego
 const COLUMNAS = 5;
 const FILAS = 5;
-const CANTIDAD_MINAS = 5;
+const CANTIDAD_MINAS = 10;
 
 //Variables con colores para los casilleros (NO se pudieron declarar como constantes ya que  la fn color sólo está definida para el setup y el draw)
 var COLOR_CASILLERO_CON_MINA;
@@ -36,11 +36,13 @@ function draw() {
   {
     if (mouseButton == LEFT){
       if (tieneMinaCasillero(columnaPresionada,filaPresionada)== true){
+        mostrarMinas();
         perder();
       }
       else{
         pintarCasillero(columnaPresionada, filaPresionada, COLOR_CASILLERO_SIN_MINA);
         descubrirCasillero(columnaPresionada, filaPresionada); //pinta el casillero clickeado. Modificar/completar
+        contarMinasAlrededor();
       }
 
   
@@ -69,22 +71,40 @@ function ganoElJuego(){
   }
 
 }
-function ponerMinasTablero(ponerMinaCasillero)
+function ponerMinasTablero()
 {
-  for (let contador =0; contador<CANTIDAD_MINAS; contador++);{
+  for (let contador =0; contador < CANTIDAD_MINAS; contador++){
     filaAleatoria = Math.floor(random(0,FILAS));
     columnaAleatorio = Math.floor(random(0,COLUMNAS));
-    ponerMinaCasillero(numeroAleatorio1, numeroAleatorio2);
+    ponerMinaCasillero(columnaAleatorio, filaAleatoria);
 
     //ToDo: no se repitan las minas en el mismo casillero
   }
 }
 
-function mostrarMinas(){
-
-}
-
-function contarMinasAlrededor(columna, fila)
+function mostrarMinas()
 {
-  return 9;   //Esto hace que SIEMPRE cuente 9 minas alrededor. Modificar/completar
+  for (let i=0; i < FILAS; i++)
+  {
+    for (let j =0; j < COLUMNAS; j++)
+    {
+      if(tieneMinaCasillero(j,i))
+      {
+        pintarCasillero(j, i, COLOR_CASILLERO_CON_MINA);
+      }
+    }
+  }
+}
+function contarMinasAlrededor(columnaPresionada, filaAleatoria)
+{
+  let cont = 0;
+  for(let i=filaPresionada-1; i< filaPresionada; i++){
+    for(let j=columnaPresionada-1; j<columnaPresionada; j++){
+      if (tieneMinaCasillero(j,i)== true){
+        cont=cont+1
+      }
+    }
+  }
+  
+  return cont;   //Esto hace que SIEMPRE cuente 9 minas alrededor. Modificar/completar
 }
