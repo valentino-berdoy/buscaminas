@@ -1,7 +1,7 @@
 //Constantes del juego
-const COLUMNAS = 10;
-const FILAS = 10;
-const CANTIDAD_MINAS = 10;
+const COLUMNAS = 3;
+const FILAS = 3;
+const CANTIDAD_MINAS = 2;
 
 //Variables con colores para los casilleros (NO se pudieron declarar como constantes ya que  la fn color sólo está definida para el setup y el draw)
 var COLOR_CASILLERO_CON_MINA;
@@ -43,32 +43,27 @@ function draw() {
         pintarCasillero(columnaPresionada, filaPresionada, COLOR_CASILLERO_SIN_MINA);
         descubrirCasillero(columnaPresionada, filaPresionada); //pinta el casillero clickeado. Modificar/completar
         contarMinasAlrededor();
+        ganoElJuego();
       }
 
   
     }
-    else{
+    else {
      pintarCasillero(columnaPresionada, filaPresionada, COLOR_CASILLERO_MARCADO)
     }
     
       
     }
-if(ganoElJuego()==true){
-  gano()
-}
-    
-    hizoClick = false;  //Indico que ya "procesé" el click del usuario. NO modificar
+    hizoClick = false; 
   }
 
 
 
 function ganoElJuego(){
   if (casillerosSinDescubrir==CANTIDAD_MINAS){
-    return true;  
+    ganar()
     } 
-  else{
-    return false;
-  }
+
 
 }
 function ponerMinasTablero()
@@ -76,12 +71,14 @@ function ponerMinasTablero()
   for (let contador =0; contador < CANTIDAD_MINAS; contador++){
     filaAleatoria = Math.floor(random(0,FILAS));
     columnaAleatorio = Math.floor(random(0,COLUMNAS));
-    if (tieneMinaCasillero(columnaAleatorio, filaAleatoria) == false){
+    if (!tieneMinaCasillero(columnaAleatorio, filaAleatoria)){
       ponerMinaCasillero(columnaAleatorio, filaAleatoria);
     }
+    else 
+      contador--
     
 
-    //ToDo: no se repitan las minas en el mismo casillero
+
   }
 }
 
@@ -98,20 +95,16 @@ function mostrarMinas()
     }
   }
 }
-function contarMinasAlrededor(columnaPresionada, filaPresionada)
-{
-  
+
+function contarMinasAlrededor(columnaPresionada, filaPresionada){
   let cont = 0;
 
-  for (let p = -1; p <= +1; p++){
-    for (let j = -1; j <= +1; j++){
+  for (let i = columnaPresionada-1; i <= columnaPresionada+1; i++){
+    for (let j = filaPresionada-1; j <= filaPresionada+1; j++){
 
-      colAdy = columnaPresionada + p;
-      filAdy = filaPresionada + j;
+      if (i >= 0 && i < COLUMNAS && j >= 0 && j < FILAS) {
 
-      if (colAdy >= 0 && colAdy < COLUMNAS && filAdy >= 0 && filAdy < FILAS) {
-
-        if (tieneMinaCasillero(colAdy, filAdy)) {
+        if (tieneMinaCasillero(i, j)) {
           cont ++;
         }
       }    
